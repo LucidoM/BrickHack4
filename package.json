@@ -1,0 +1,29 @@
+{
+  "name": "brickhack-4",
+  "version": "0.0.0",
+  "description": "the grand vision",
+  "main": "src/entry.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel index.html",
+    "build": "cross-env NODE_ENV=production parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucidoM/BrickHack4.git"
+  },
+  "author": "Michael Lucido, Matthew Crocco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LucidoM/BrickHack4/issues"
+  },
+  "homepage": "https://github.com/LucidoM/BrickHack4#readme",
+  "devDependencies": {
+    "cross-env": "^5.1.3",
+    "parcel-bundler": "^1.5.1"
+  },
+  "dependencies": {
+    "babel-preset-react-app": "^3.1.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
