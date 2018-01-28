@@ -1,24 +1,23 @@
-import {h} from "hyperapp"
+import { h } from "hyperapp"
 import { Link } from "@hyperapp/router"
 
-import { getRoutePrefix } from '../utils';
+import { getRoutePrefix } from '../utils'
 
+const VidLinkItem = ({ vid }) => {
+  return (
+    <li>
+      <Link to={ vid.videoPath}>{ vid.metadata.title }</Link>
+    </li>
+  )
+}
 
-const Home = (state, actions) => {
-    console.log(state)
-    const items = state.videos.map((vid) => {
-        const target = `${getRoutePrefix()}/video` //${vid.target}`
-        return (
-            <li> 
-                <Link to ={target}>{vid.title}</Link>
-            </li>
-        )
-    })
-    return (
-        <ol>
-            {items}
-        </ol> 
-    )
+const Home = ({ videos }, actions) => {
+  console.log(videos)
+  return (
+    <ol>
+      { videos.map((v) => <VidLinkItem vid={v} />) }
+    </ol>
+  )
 }
 
 export default Home 
