@@ -6,6 +6,13 @@
       {
         "pragma": "h"
       }
+    ],
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
     ]
   ]
 }
